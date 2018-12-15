@@ -1,0 +1,32 @@
+
+<form [formGroup]="activForm" #f="ngForm" (ngSubmit)="onSubmit(f)" class="container mx-auto">
+  <div class="row mt-5">
+    <label class="col-2 offset-2" for="activity">Activity: </label>
+    <input class="col-5 offset-1" type="text" id="activity" formControlName="activity">
+  </div>
+  <div class="row mt-5">
+    <label class="col-2 offset-2" for="participants">Participants: </label>
+    <input class="col-5 offset-1" type="number" id="participants" formControlName="participants">
+  </div>
+  <div class="row mt-5">
+    <label class="col-2 offset-2" for="accessibility">Accessibility: </label>
+    <input class="col-5 offset-1" type="number" id="accessibility" formControlName="accessibility">
+  </div>
+  <div class="row mt-5">
+    <label class="col-2 offset-2" for="type">Type: </label>
+    <input class="col-5 offset-1" type="text" id="type" formControlName="type">
+  </div>
+  <div class="row mt-5">
+    <label class="col-2 offset-2" for="price">Price: </label>
+    <input class="col-5 offset-1" type="number" id="price" formControlName="price">
+  </div>
+  <div class="row my-5 pb-5">
+    <label class="col-2 offset-2" for="key">Key: </label>
+    <input class="col-5 offset-1" type="number" id="key" formControlName="key">
+  </div>
+  <div class="w-50 mx-auto d-flex justify-content-around mt-5">
+    <button type="button" (click)="updateAll()" class="btn btn-primary">Display Activity</button>
+    <button type="button" (click)="loadNewActivity()" class="btn btn-warning">Load New Activity</button>
+    <input class="btn btn-secondary" type="reset" value="Reset">
+  </div>
+</form>
